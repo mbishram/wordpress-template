@@ -1,0 +1,45 @@
+{
+  "name": "mti/singapore-inc",
+  "type": "wordpress-theme",
+  "license": "proprietary",
+  "description": "Theme for SingaporeInc website",
+  "authors": [
+    {
+      "name": "Muh. Bishram Yashir A. A.",
+      "email": "m.bishram.yashir@gmail.com",
+      "homepage": "https://github.com/mbishram"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "hybrid"
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "log1x/poet": "^2.1",
+    "roots/acorn": "^5.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.20"
+  },
+  "suggest": {
+    "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0)."
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "post-autoload-dump": [
+      "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+    ]
+  }
+}

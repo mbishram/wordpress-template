@@ -1,0 +1,6 @@
+# Ignore sage theme block patterns
+**/block-patterns/*.blade.php
+
+# Ignore php file, use Laravel Pint instead of Prettier
+**/*.php
+!**/*.blade.php

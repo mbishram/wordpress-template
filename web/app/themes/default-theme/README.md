@@ -1,7 +1,7 @@
-# SingaporeInc
+# Default Theme
 
-Theme for SingaporeInc website. Created using [Sage](https://roots.io/sage/) and
-enhanced using [Poet](https://github.com/Log1x/poet).
+Hybrid theme created using [Sage](https://roots.io/sage/) and enhanced
+using [Poet](https://github.com/Log1x/poet).
 
 ## Requirements
 
@@ -17,7 +17,7 @@ and Composer.
 ddev npm install
 
 # Install Composer dependencies
-ddev composer -d web/app/themes/singapore-inc install
+ddev composer -d web/app/themes/default-theme install
 ```
 
 Copy `.env.example` to `.env` and update the following values.

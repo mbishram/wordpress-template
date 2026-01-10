@@ -1,7 +1,7 @@
-# MTI WordPress
+# WordPress Template
 
-WordPress portion of the MTI website. Created using [DDEV](https://ddev.com/)
-and [Bedrock](https://roots.io/bedrock/)
+A WordPress template created using [DDEV](https://ddev.com/)
+and [Bedrock](https://roots.io/bedrock/).
 
 ## Requirements
 
@@ -29,7 +29,7 @@ see [DDEV Environment Variable page](https://roots.io/bedrock/docs/environment-v
 After environment variables are set, install WordPress using the command below.
 
 ```shell
-ddev wp core install --url='$DDEV_PRIMARY_URL' --title='SingaporeInc' --admin_user=admin --admin_password=admin --admin_email=admin@example.com
+ddev wp core install --url='$DDEV_PRIMARY_URL' --title='Wordpress Template' --admin_user=admin --admin_password=admin --admin_email=admin@example.com
 ```
 
 `title`, `admin_user`, `admin_password`, and `admin_email` can be whatever value
@@ -50,6 +50,14 @@ information about the DDEV project.
 ```shell
 ddev describe
 ```
+
+## Default Theme
+
+The default theme is created using [Sage](https://roots.io/sage/). They can be
+found in `web/app/themes/default-theme`.
+
+For more details on how to run them, see the `README.md` file on the theme root
+directory.
 
 ## Development
 

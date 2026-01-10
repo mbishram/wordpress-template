@@ -1,8 +1,8 @@
 {
-  "name": "mti/mti-wordpress",
+  "name": "mbishram/wordpress-template",
   "type": "project",
-  "license": "proprietary",
-  "description": "WordPress portion of the MTI website",
+  "license": "MIT",
+  "description": "WordPress template created using DDEV, Bedrock, and Sage",
   "authors": [
     {
       "name": "Muh. Bishram Yashir A. A.",

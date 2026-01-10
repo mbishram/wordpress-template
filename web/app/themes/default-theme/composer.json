@@ -1,8 +1,8 @@
 {
-  "name": "mti/singapore-inc",
+  "name": "mbishram/default-theme",
   "type": "wordpress-theme",
-  "license": "proprietary",
-  "description": "Theme for SingaporeInc website",
+  "license": "MIT",
+  "description": "Hybrid theme created using Sage",
   "authors": [
     {
       "name": "Muh. Bishram Yashir A. A.",

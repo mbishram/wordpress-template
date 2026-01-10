@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
-    base: '/app/themes/singapore-inc/public/build/',
+    base: '/app/themes/default-theme/public/build/',
     plugins: [
       tailwindcss(),
       laravel({

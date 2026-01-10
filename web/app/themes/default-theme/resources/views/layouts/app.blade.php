@@ -14,7 +14,7 @@
 
     <div id="app">
       <a class="sr-only focus:not-sr-only" href="#main">
-        {{ __('Skip to content', 'sage') }}
+        {{ __('Skip to content', 'default-theme') }}
       </a>
 
       @include('sections.header')

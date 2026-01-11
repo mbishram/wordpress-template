@@ -16,7 +16,7 @@ Before starting development, you might want to change the name of the theme. To 
 - Text Domain `default-theme` inside `./style.css` into `your-text-domain`
 - Optional but highly encouraged, you can also replace all the occurrences of `'default-theme'` translation text domain into `'your-text-domain'`. For example, 
 
-```bladehtml
+```diff
 <a class="sr-only focus:not-sr-only" href="#main">
 - {{ __('Skip to content', 'default-theme') }}
 + {{ __('Skip to content', 'your-text-domain') }}

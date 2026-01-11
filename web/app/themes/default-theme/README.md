@@ -17,7 +17,7 @@ do that, you need to update several files and folders; they are listed below.
 - `base` property inside `./vite.config.js`, from
   `'/app/themes/default-theme/public/build/'` into
   `'/app/themes/your-text-domain/public/build/'`
-- `DEFAULT_THEME_DIR` variable inside `/bin/init`, from
+- `DEFAULT_THEME_DIR` variable inside `/bin/init` in the project root directory, from
   `"web/app/themes/default-theme"` to `"web/app/themes/your-text-domain"`
 - Optional but highly encouraged, you can also replace all the occurrences of
   `'default-theme'` translation text domain into `'your-text-domain'`. For

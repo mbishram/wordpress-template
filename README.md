@@ -32,7 +32,14 @@ WP_SITEURL="${WP_HOME}/wp"
 For more details about what each of those environment variables does,
 see [DDEV Environment Variable page](https://roots.io/bedrock/docs/environment-variables/).
 
-After environment variables are set, install WordPress using the command below.
+After environment variables are set, install Composer dependencies using the
+command below.
+
+```shell
+ddev composer install
+```
+
+Next, install WordPress using the command below.
 
 ```shell
 ddev wp core install --url='$DDEV_PRIMARY_URL' --title='Your Wordpress Title' --admin_user=admin --admin_password=admin --admin_email=admin@example.com
@@ -43,15 +50,8 @@ you want; it'll only affect your local development environment. But if you
 didn't change anything, the admin dashboard user and password are `admin` and
 `admin`.
 
-After that, you can run the following command to start DDEV server.
-
-```shell
-ddev start
-```
-
-It should show the URL where the site is served. If you want to check them
-again, you can run the following command to get the URL with some additional
-information about the DDEV project.
+After that, you can run the following command to get the URL of your DDEV
+project plus some additional information about it.
 
 ```shell
 ddev describe
@@ -59,8 +59,9 @@ ddev describe
 
 ## Default Theme
 
-The default theme is created using [Sage](https://roots.io/sage/). They can be
-found in `web/app/themes/default-theme`.
+After setting up WordPress, you can start developing the theme. This project
+comes with a default theme that is created using [Sage](https://roots.io/sage/).
+They can be found in `web/app/themes/default-theme`.
 
 For more details on how to run them, see the `README.md` file on the theme root
 directory.

@@ -74,6 +74,11 @@ Config::define('WP_HOME', env('WP_HOME'));
 Config::define('WP_SITEURL', env('WP_SITEURL'));
 
 /**
+ * Default Theme
+ */
+Config::define('WP_DEFAULT_THEME', env('WP_DEFAULT_THEME') ?: 'default-theme');
+
+/**
  * Custom Content Directory
  */
 Config::define('CONTENT_DIR', '/app');

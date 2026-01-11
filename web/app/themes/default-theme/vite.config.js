@@ -3,11 +3,11 @@ import tailwindcss from '@tailwindcss/vite';
 import laravel from 'laravel-vite-plugin';
 import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   const host = env.APP_URL ? new URL(env.APP_URL).hostname : '';
-  if (!host) {
+  if (!host && command !== 'build') {
     throw new Error(
       'APP_URL environment variable is not set. Create .env file to set them.',
     );

@@ -3,21 +3,34 @@
 Hybrid theme created using [Sage](https://roots.io/sage/) and enhanced
 using [Poet](https://github.com/Log1x/poet).
 
+
 ## Requirements
 
 - DDEV >= 1.24.10
 
 ## Getting Started
 
-While in the theme root directory, install the required dependencies using npm
-and Composer.
+Before starting development, you might want to change the name of the theme. To do that, you need to update several files and folders; they are listed below.
+
+- The theme folder itself `./default-theme` into `./your-text-domain`
+- Text Domain `default-theme` inside `./style.css` into `your-text-domain`
+- Optional but highly encouraged, you can also replace all the occurrences of `'default-theme'` translation text domain into `'your-text-domain'`. For example, 
+
+```bladehtml
+<a class="sr-only focus:not-sr-only" href="#main">
+- {{ __('Skip to content', 'default-theme') }}
++ {{ __('Skip to content', 'your-text-domain') }}
+</a>
+```
+
+After that, while in the theme root directory, install the required dependencies using npm and Composer.
 
 ```shell
 # Install npm dependencies
 ddev npm install
 
 # Install Composer dependencies
-ddev composer -d web/app/themes/default-theme install
+ddev composer -d web/app/themes/your-text-domain install
 ```
 
 Copy `.env.example` to `.env` and update the following values.

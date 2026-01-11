@@ -9,7 +9,13 @@ and [Bedrock](https://roots.io/bedrock/).
 
 ## Getting Started
 
-Copy `.env.example` to `.env` and update the following values.
+To get started, rename the DDEV project using the command below.
+
+```shell
+ddev config --project-name=your-project-name-here
+```
+
+Afterward, copy `.env.example` to `.env` and update the following values.
 
 ```dotenv
 DB_NAME='db'
@@ -29,7 +35,7 @@ see [DDEV Environment Variable page](https://roots.io/bedrock/docs/environment-v
 After environment variables are set, install WordPress using the command below.
 
 ```shell
-ddev wp core install --url='$DDEV_PRIMARY_URL' --title='Wordpress Template' --admin_user=admin --admin_password=admin --admin_email=admin@example.com
+ddev wp core install --url='$DDEV_PRIMARY_URL' --title='Your Wordpress Title' --admin_user=admin --admin_password=admin --admin_email=admin@example.com
 ```
 
 `title`, `admin_user`, `admin_password`, and `admin_email` can be whatever value

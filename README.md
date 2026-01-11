@@ -32,12 +32,15 @@ WP_SITEURL="${WP_HOME}/wp"
 For more details about what each of those environment variables does,
 see [DDEV Environment Variable page](https://roots.io/bedrock/docs/environment-variables/).
 
-After environment variables are set, install Composer dependencies using the
+After environment variables are set, install all the dependencies using the
 command below.
 
 ```shell
-ddev composer install
+./bin/init
 ```
+
+This will install dependencies on the project root as well as the default theme
+directory. It will also build the default theme's assets.
 
 Next, install WordPress using the command below.
 
@@ -57,6 +60,17 @@ project plus some additional information about it.
 ddev describe
 ```
 
+> As a note, you only need to run this whole process once.
+
+## Development
+
+After setting up the project, if you want to start the project again, you only
+need to start DDEV.
+
+```shell
+ddev start
+```
+
 ## Default Theme
 
 After setting up WordPress, you can start developing the theme. This project
@@ -66,7 +80,7 @@ They can be found in `web/app/themes/default-theme`.
 For more details on how to run them, see the `README.md` file on the theme root
 directory.
 
-## Development
+## Commands
 
 While developing, you might want to run some commands to install an npm
 package (`npm install`) or require a composer package (`composer install`).

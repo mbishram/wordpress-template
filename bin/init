@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Install the required dependencies to make the WordPress project run
+
+echo "Installing root project dependencies..."
+ddev composer install
+echo
+
+DEFAULT_THEME_DIR="web/app/themes/default-theme"
+
+echo "Installing default theme's dependencies..."
+ddev npm --prefix $DEFAULT_THEME_DIR install
+ddev composer -d $DEFAULT_THEME_DIR install
+echo
+
+echo "Building the theme..."
+ddev npm --prefix $DEFAULT_THEME_DIR run build
+
+echo
+echo "Complete!"

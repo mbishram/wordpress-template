@@ -2,6 +2,7 @@ import { defineConfig, loadEnv } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
 import laravel from 'laravel-vite-plugin';
 import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
@@ -16,6 +17,9 @@ export default defineConfig(({ command, mode }) => {
   return {
     base: '/app/themes/default-theme/public/build/',
     plugins: [
+      // Generate alias based on jsconfig.json
+      tsconfigPaths(),
+
       tailwindcss(),
       laravel({
         input: [
@@ -39,11 +43,6 @@ export default defineConfig(({ command, mode }) => {
     ],
     resolve: {
       alias: {
-        '@scripts': '/resources/js',
-        '@styles': '/resources/css',
-        '@fonts': '/resources/fonts',
-        '@images': '/resources/images',
-
         /**
          * Alias to keep WordPress using dependency extraction instead of one from node_modules. @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-dependency-extraction-webpack-plugin/
          *

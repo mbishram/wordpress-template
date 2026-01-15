@@ -6,6 +6,7 @@
 
 namespace App;
 
+use Exception;
 use Illuminate\Support\Facades\Vite;
 
 /**
@@ -33,7 +34,12 @@ add_filter('admin_head', function () {
         return;
     }
 
-    $dependencies = json_decode(Vite::content('editor.deps.json'));
+    try {
+        $content = Vite::content('editor.deps.json');
+        $dependencies = json_decode($content) ?: [];
+    } catch (Exception $e) {
+        $dependencies = [];
+    }
 
     foreach ($dependencies as $dependency) {
         if (! wp_script_is($dependency)) {

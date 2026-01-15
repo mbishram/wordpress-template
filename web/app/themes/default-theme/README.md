@@ -44,11 +44,28 @@ This configuration is needed to fix the CORS error that happened in the
 development environment. For more details,
 see [Laravel Vite page on the CORS section](https://laravel.com/docs/12.x/vite#cors).
 
-Afterward, use the following command to watch the file changes while developing.
+## Development
+
+To start development and watch the file changes, run the following command.
 
 ```shell
 ddev dev
 ```
+
+You also need to make sure the build artifact exists on `/public/build/`. They
+should already be generated when you first run the `bin/init` command. But if it
+doesn't exist, run the build command below to generate it.
+
+```shell
+ddev npm run build
+```
+
+The build artifacts are mostly used for the `theme.json` generation. Without it,
+the WordPress editor will not work properly.
+
+Every time you make changes to `./theme.json`, you must also run the build
+command. That's because hot reloading for `./theme.json` during development is
+not supported by Sage.
 
 ## Linting
 

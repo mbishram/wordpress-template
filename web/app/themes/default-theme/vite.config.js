@@ -57,6 +57,7 @@ export default defineConfig(({ command, mode }) => {
     server: {
       host: '0.0.0.0',
       port: 5173,
+      strictPort: true,
       hmr: {
         protocol: 'wss',
         host,

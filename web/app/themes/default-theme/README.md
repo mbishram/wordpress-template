@@ -17,8 +17,9 @@ do that, you need to update several files and folders; they are listed below.
 - `base` property inside `./vite.config.js`, from
   `'/app/themes/default-theme/public/build/'` into
   `'/app/themes/your-text-domain/public/build/'`
-- `DEFAULT_THEME_DIR` variable inside `/bin/init` in the project root directory, from
-  `"web/app/themes/default-theme"` to `"web/app/themes/your-text-domain"`
+- `DEFAULT_THEME_DIR` variable inside `/bin/init` and `/.ddev/commands/web/dev`
+  in the project root directory, from `"web/app/themes/default-theme"` to
+  `"web/app/themes/your-text-domain"`
 - Optional but highly encouraged, you can also replace all the occurrences of
   `'default-theme'` translation text domain into `'your-text-domain'`. For
   example,
@@ -46,7 +47,7 @@ see [Laravel Vite page on the CORS section](https://laravel.com/docs/12.x/vite#c
 Afterward, use the following command to watch the file changes while developing.
 
 ```shell
-ddev npm run dev
+ddev dev
 ```
 
 ## Linting
